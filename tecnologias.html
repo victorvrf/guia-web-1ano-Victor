@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologias – Guia Profissional de Desenvolvimento Web</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Guia Profissional de Desenvolvimento Web</h1>
+            <button class="theme-toggle" aria-label="Alternar tema">🌙</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tecnologias.html" aria-current="page">Tecnologias</a></li>
+                    <li><a href="boas-praticas.html">Boas Práticas</a></li>
+                    <li><a href="fluxo.html">Fluxo de Trabalho</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Panorama de Tecnologias Web</h2>
+                <p>Explore as principais tecnologias e ferramentas do desenvolvimento web moderno</p>
+            </div>
+        </section>
+
+        <section class="tech-cards">
+            <div class="container">
+                <h2>Frontend - Interface do Usuário</h2>
+                <div class="cards">
+                    <article class="card">
+                        <h3>HTML5</h3>
+                        <p>Linguagem de marcação semântica para estruturar conteúdo web com elementos modernos.</p>
+                        <pre><code>&lt;article&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Título&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;p&gt;Conteúdo semântico&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+                        <p><strong>Use para:</strong> Estrutura, semântica, acessibilidade</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>CSS3</h3>
+                        <p>Linguagem de estilo com recursos avançados como Grid, Flexbox e animações.</p>
+                        <pre><code>.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+}</code></pre>
+                        <p><strong>Use para:</strong> Layout responsivo, animações, temas</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>JavaScript ES6+</h3>
+                        <p>Linguagem de programação moderna com recursos como arrow functions e modules.</p>
+                        <pre><code>const fetchData = async () => {
+  const response = await fetch('/api/data');
+  return response.json();
+};</code></pre>
+                        <p><strong>Use para:</strong> Interatividade, APIs, manipulação DOM</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="tech-cards">
+            <div class="container">
+                <h2>Frameworks & Bibliotecas</h2>
+                <div class="cards">
+                    <article class="card">
+                        <h3>React</h3>
+                        <p>Biblioteca JavaScript para construir interfaces de usuário com componentes reutilizáveis.</p>
+                        <pre><code>function Welcome({name}) {
+  return &lt;h1&gt;Hello, {name}!&lt;/h1&gt;;
+}</code></pre>
+                        <p><strong>Use para:</strong> SPAs, componentes, estado complexo</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Vue.js</h3>
+                        <p>Framework progressivo que combina o melhor do React e Angular de forma simples.</p>
+                        <pre><code>&lt;template&gt;
+  &lt;h1&gt;{{ message }}&lt;/h1&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data() { return { message: 'Hello!' } }
+}
+&lt;/script&gt;</code></pre>
+                        <p><strong>Use para:</strong> Projetos de médio porte, curva de aprendizado suave</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Tailwind CSS</h3>
+                        <p>Framework CSS utility-first para estilização rápida e consistente.</p>
+                        <pre><code>&lt;div class="bg-blue-500 text-white 
+           p-4 rounded-lg shadow-md"&gt;
+  Card estilizado
+&lt;/div&gt;</code></pre>
+                        <p><strong>Use para:</strong> Prototipagem rápida, design systems</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="tech-cards">
+            <div class="container">
+                <h2>Ferramentas de Desenvolvimento</h2>
+                <div class="cards">
+                    <article class="card">
+                        <h3>Git & GitHub</h3>
+                        <p>Sistema de controle de versão distribuído e plataforma de hospedagem de código.</p>
+                        <pre><code>git add .
+git commit -m "feat: nova funcionalidade"
+git push origin main</code></pre>
+                        <p><strong>Use para:</strong> Versionamento, colaboração, deploy</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>VS Code</h3>
+                        <p>Editor de código com extensões poderosas para desenvolvimento web.</p>
+                        <pre><code>// Extensões essenciais:
+// - Live Server
+// - Prettier
+// - ES7+ React/Redux/React-Native</code></pre>
+                        <p><strong>Use para:</strong> Desenvolvimento, debugging, produtividade</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Vite</h3>
+                        <p>Build tool moderna e rápida para desenvolvimento frontend.</p>
+                        <pre><code>npm create vite@latest meu-projeto
+cd meu-projeto
+npm install
+npm run dev</code></pre>
+                        <p><strong>Use para:</strong> Build rápido, hot reload, otimização</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="tech-cards">
+            <div class="container">
+                <h2>Backend & Banco de Dados</h2>
+                <div class="cards">
+                    <article class="card">
+                        <h3>Node.js</h3>
+                        <p>Runtime JavaScript para desenvolvimento backend escalável.</p>
+                        <pre><code>const express = require('express');
+const app = express();
+
+app.get('/api/users', (req, res) => {
+  res.json({users: []});
+});</code></pre>
+                        <p><strong>Use para:</strong> APIs REST, microserviços, real-time</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>MongoDB</h3>
+                        <p>Banco de dados NoSQL orientado a documentos, flexível e escalável.</p>
+                        <pre><code>const user = await User.findOne({
+  email: 'user@example.com'
+});
+await user.save();</code></pre>
+                        <p><strong>Use para:</strong> Dados não-relacionais, prototipagem, escalabilidade</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>PostgreSQL</h3>
+                        <p>Banco de dados relacional robusto com recursos avançados.</p>
+                        <pre><code>SELECT u.name, p.title 
+FROM users u 
+JOIN posts p ON u.id = p.user_id 
+WHERE u.active = true;</code></pre>
+                        <p><strong>Use para:</strong> Dados relacionais, transações, integridade</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Guia Profissional de Desenvolvimento Web</p>
+        </div>
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz – Guia Profissional de Desenvolvimento Web</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Guia Profissional de Desenvolvimento Web</h1>
+            <button class="theme-toggle" aria-label="Alternar tema">🌙</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tecnologias.html">Tecnologias</a></li>
+                    <li><a href="boas-praticas.html">Boas Práticas</a></li>
+                    <li><a href="fluxo.html">Fluxo de Trabalho</a></li>
+                    <li><a href="quiz.html" aria-current="page">Quiz</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Quiz de Desenvolvimento Web</h2>
+                <p>Teste seus conhecimentos sobre HTML, CSS, JavaScript e boas práticas</p>
+                <div id="quiz-info">
+                    <p><strong>10 perguntas</strong> • <strong>Múltipla escolha</strong> • <strong>Pontuação salva</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container quiz">
+            <form id="quiz-form">
+                <article class="quiz-question">
+                    <h3>1. Qual a função do HTML em uma página web?</h3>
+                    <label><input type="radio" name="q1" value="a"> Definir o estilo da página</label><br>
+                    <label><input type="radio" name="q1" value="b" data-correct="true"> Estruturar o conteúdo</label><br>
+                    <label><input type="radio" name="q1" value="c"> Adicionar interatividade</label><br>
+                    <label><input type="radio" name="q1" value="d"> Gerenciar banco de dados</label><br>
+                </article>
+
+                <article class="quiz-question">
+                    <h3>2. Qual a unidade recomendada para design responsivo?</h3>
+                    <label><input type="radio" name="q2" value="a"> px (pixels)</label><br>
+                    <label><input type="radio" name="q2" value="b" data-correct="true"> rem/em (unidades relativas)</label><br>
+                    <label><input type="radio" name="q2" value="c"> pt (pontos)</label><br>
+                    <label><input type="radio" name="q2" value="d"> cm (centímetros)</label><br>
+                </article>
+
+                <article class="quiz-question">
+                    <h3>3. Qual método adiciona um evento de clique em JavaScript?</h3>
+                    <label><input type="radio" name="q3" value="a"> onClick()</label><br>
+                    <label><input type="radio" name="q3" value="b"> click()</label><br>
+                    <label><input type="radio" name="q3" value="c" data-correct="true"> addEventListener('click', function)</label><br>
+                    <label><input type="radio" name="q3" value="d"> addClick()</label><br>
+                </article>
+
+                <article class="quiz-question">
+                    <h3>4. O que significa usar HTML semântico?</h3>
+                    <label><input type="radio" name="q4" value="a"> Usar apenas divs e spans</label><br>
+                    <label><input type="radio" name="q4" value="b" data-correct="true"> Usar elementos que descrevem o significado do conteúdo</label><br>
+                    <label><input type="radio" name="q4" value="c"> Usar apenas tags antigas</label><br>
+                    <label><input type="radio" name="q4" value="d"> Usar IDs em todos os elementos</label><br>
+                </article>
+
+                <article class="quiz-question">
+                    <h3>5. Qual banco de dados é relacional?</h3>
+                    <label><input type="radio" name="q5" value="a"> MongoDB</label><br>
+                    <label><input type="radio" name="q5" value="b" data-correct="true"> PostgreSQL</label><br>
+                    <label><input type="radio" name="q5" value="c"> Redis</label><br>
+                    <label><input type="radio" name="q5" value="d"> Elasticsearch</label><br>
+                </article>
+
+                <article class="quiz-question">
+                    <h3>6. Qual atributo conecta um &lt;label&gt; a um &lt;input&gt;?</h3>
+                    <label><input type="radio" name="q6" value="a"> id</label><br>
+                    <label><input type="radio" name="q6" value="b" data-correct="true"> for</label><br>
+                    <label><input type="radio" name="q6" value="c"> name</label><br>
+                    <label><input type="radio" name="q6" value="d"> class</label><br>
+                </article>
+
+                <article class="quiz-question">
+                    <h3>7. Qual comando cria um commit no Git?</h3>
+                    <label><input type="radio" name="q7" value="a"> git push</label><br>
+                    <label><input type="radio" name="q7" value="b"> git add</label><br>
+                    <label><input type="radio" name="q7" value="c" data-correct="true"> git commit -m "mensagem"</label><br>
+                    <label><input type="radio" name="q7" value="d"> git clone</label><br>
+                </article>
+
+                <article class="quiz-question">
+                    <h3>8. Qual etapa vem antes da implementação em um projeto web?</h3>
+                    <label><input type="radio" name="q8" value="a"> Deploy</label><br>
+                    <label><input type="radio" name="q8" value="b"> Testes</label><br>
+                    <label><input type="radio" name="q8" value="c" data-correct="true"> Planejamento e Design</label><br>
+                    <label><input type="radio" name="q8" value="d"> Monitoramento</label><br>
+                </article>
+
+                <article class="quiz-question">
+                    <h3>9. Qual técnica reduz o carregamento de imagens?</h3>
+                    <label><input type="radio" name="q9" value="a"> Usar imagens maiores</label><br>
+                    <label><input type="radio" name="q9" value="b" data-correct="true"> Lazy loading</label><br>
+                    <label><input type="radio" name="q9" value="c"> Carregar todas as imagens de uma vez</label><br>
+                    <label><input type="radio" name="q9" value="d"> Usar apenas PNG</label><br>
+                </article>
+
+                <article class="quiz-question">
+                    <h3>10. O que faz localStorage.setItem("chave", "valor")?</h3>
+                    <label><input type="radio" name="q10" value="a"> Remove dados do navegador</label><br>
+                    <label><input type="radio" name="q10" value="b" data-correct="true"> Armazena dados no navegador</label><br>
+                    <label><input type="radio" name="q10" value="c"> Envia dados para o servidor</label><br>
+                    <label><input type="radio" name="q10" value="d"> Cria uma cookie</label><br>
+                </article>
+
+                <button type="submit" class="btn-primary">Finalizar Quiz</button>
+            </form>
+
+            <div id="quiz-result" class="quiz-result" style="display: none;"></div>
+        </section>
+    </main>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Guia Profissional de Desenvolvimento Web</p>
+        </div>
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

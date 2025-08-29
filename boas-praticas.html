@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boas Práticas – Guia Profissional de Desenvolvimento Web</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Guia Profissional de Desenvolvimento Web</h1>
+            <button class="theme-toggle" aria-label="Alternar tema">🌙</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tecnologias.html">Tecnologias</a></li>
+                    <li><a href="boas-praticas.html" aria-current="page">Boas Práticas</a></li>
+                    <li><a href="fluxo.html">Fluxo de Trabalho</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Boas Práticas de Desenvolvimento</h2>
+                <p>Diretrizes essenciais para criar código limpo, acessível e profissional</p>
+            </div>
+        </section>
+
+        <section class="tech-cards">
+            <div class="container">
+                <h2>HTML Semântico</h2>
+                <div class="cards">
+                    <article class="card">
+                        <h3>Estrutura Semântica</h3>
+                        <p>Use elementos HTML que descrevem o significado do conteúdo, não apenas a aparência.</p>
+                        <pre><code>&lt;!-- ❌ Não semântico --&gt;
+&lt;div class="header"&gt;...&lt;/div&gt;
+
+&lt;!-- ✅ Semântico --&gt;
+&lt;header&gt;...&lt;/header&gt;</code></pre>
+                        <p><strong>Benefícios:</strong> SEO, acessibilidade, manutenibilidade</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Hierarquia de Títulos</h3>
+                        <p>Mantenha uma ordem lógica nos headings (h1, h2, h3...) sem pular níveis.</p>
+                        <pre><code>&lt;h1&gt;Título Principal&lt;/h1&gt;
+  &lt;h2&gt;Seção&lt;/h2&gt;
+    &lt;h3&gt;Subseção&lt;/h3&gt;
+    &lt;h3&gt;Outra Subseção&lt;/h3&gt;
+  &lt;h2&gt;Nova Seção&lt;/h2&gt;</code></pre>
+                        <p><strong>Impacto:</strong> Navegação por leitores de tela, SEO</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Atributos Alt</h3>
+                        <p>Sempre forneça textos alternativos descritivos para imagens.</p>
+                        <pre><code>&lt;!-- ❌ Ruim --&gt;
+&lt;img src="foto.jpg" alt="foto"&gt;
+
+&lt;!-- ✅ Bom --&gt;
+&lt;img src="foto.jpg" 
+     alt="Desenvolvedora programando em um laptop"&gt;</code></pre>
+                        <p><strong>Impacto:</strong> Acessibilidade, SEO de imagens</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="tech-cards">
+            <div class="container">
+                <h2>CSS Responsivo</h2>
+                <div class="cards">
+                    <article class="card">
+                        <h3>Mobile First</h3>
+                        <p>Comece o design para dispositivos móveis e expanda para telas maiores.</p>
+                        <pre><code>/* Base: Mobile */
+.container { width: 100%; }
+
+/* Tablet */
+@media (min-width: 768px) {
+  .container { max-width: 750px; }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .container { max-width: 1200px; }
+}</code></pre>
+                        <p><strong>Benefícios:</strong> Performance, UX móvel otimizada</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Flexbox & Grid</h3>
+                        <p>Use layouts modernos para criar interfaces flexíveis e responsivas.</p>
+                        <pre><code>/* Flexbox para componentes */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Grid para layouts */
+.main-layout {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 2rem;
+}</code></pre>
+                        <p><strong>Vantagens:</strong> Menos código, mais flexibilidade</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Unidades Relativas</h3>
+                        <p>Prefira unidades flexíveis (rem, em, %, vw, vh) sobre pixels fixos.</p>
+                        <pre><code>/* ❌ Rígido */
+font-size: 16px;
+margin: 20px;
+
+/* ✅ Flexível */
+font-size: 1rem;
+margin: 1.25rem;
+padding: 2em;
+width: clamp(300px, 50vw, 800px);</code></pre>
+                        <p><strong>Resultado:</strong> Escalabilidade, acessibilidade</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="tech-cards">
+            <div class="container">
+                <h2>JavaScript Limpo</h2>
+                <div class="cards">
+                    <article class="card">
+                        <h3>Nomes Descritivos</h3>
+                        <p>Use nomes de variáveis e funções que expliquem claramente sua função.</p>
+                        <pre><code>// ❌ Confuso
+const d = new Date();
+const u = users.filter(x => x.a);
+
+// ✅ Claro
+const currentDate = new Date();
+const activeUsers = users.filter(user => user.isActive);</code></pre>
+                        <p><strong>Impacto:</strong> Legibilidade, manutenibilidade</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Funções Pequenas</h3>
+                        <p>Cada função deve ter uma responsabilidade única e ser fácil de testar.</p>
+                        <pre><code>// ✅ Função focada
+function validateEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+// ✅ Função de composição
+function isValidUser(user) {
+  return user.name && validateEmail(user.email);
+}</code></pre>
+                        <p><strong>Benefícios:</strong> Testabilidade, reutilização</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Tratamento de Erros</h3>
+                        <p>Sempre trate erros de forma adequada, especialmente em operações assíncronas.</p>
+                        <pre><code>// ✅ Com tratamento adequado
+async function fetchUserData(userId) {
+  try {
+    const response = await fetch(`/api/users/${userId}`);
+    
+    if (!response.ok) {
+      throw new Error(`Erro ${response.status}: ${response.statusText}`);
+    }
+    
+    return await response.json();
+  } catch (error) {
+    console.error('Erro ao buscar usuário:', error);
+    throw error; // Re-throw para o caller tratar
+  }
+}</code></pre>
+                        <p><strong>Resultado:</strong> Aplicações mais robustas</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="tech-cards">
+            <div class="container">
+                <h2>Performance & SEO</h2>
+                <div class="cards">
+                    <article class="card">
+                        <h3>Otimização de Imagens</h3>
+                        <p>Use formatos modernos e lazy loading para melhorar performance.</p>
+                        <pre><code>&lt;!-- Imagem responsiva com lazy loading --&gt;
+&lt;img src="hero-small.webp"
+     srcset="hero-small.webp 400w,
+             hero-medium.webp 800w,
+             hero-large.webp 1200w"
+     sizes="(max-width: 768px) 400px,
+            (max-width: 1024px) 800px,
+            1200px"
+     alt="Descrição da imagem"
+     loading="lazy"&gt;</code></pre>
+                        <p><strong>Ganhos:</strong> Velocidade, Core Web Vitals</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Meta Tags Essenciais</h3>
+                        <p>Configure meta tags para SEO e compartilhamento em redes sociais.</p>
+                        <pre><code>&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Título da Página - Site&lt;/title&gt;
+  &lt;meta name="description" content="Descrição concisa da página"&gt;
+  
+  &lt;!-- Open Graph para redes sociais --&gt;
+  &lt;meta property="og:title" content="Título da Página"&gt;
+  &lt;meta property="og:description" content="Descrição"&gt;
+  &lt;meta property="og:image" content="/og-image.jpg"&gt;
+&lt;/head&gt;</code></pre>
+                        <p><strong>Benefícios:</strong> SEO, compartilhamento social</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Carregamento Assíncrono</h3>
+                        <p>Carregue recursos não-críticos de forma assíncrona para melhorar a performance.</p>
+                        <pre><code>&lt;!-- Scripts não-críticos --&gt;
+&lt;script src="analytics.js" async&gt;&lt;/script&gt;
+
+&lt;!-- Fonts com preload --&gt;
+&lt;link rel="preload" href="/fonts/main.woff2" 
+      as="font" type="font/woff2" crossorigin&gt;
+
+&lt;!-- CSS crítico inline, resto carregado depois --&gt;
+&lt;script&gt;
+  // Carrega CSS não-crítico
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = '/css/non-critical.css';
+  document.head.appendChild(link);
+&lt;/script&gt;</code></pre>
+                        <p><strong>Resultado:</strong> First Paint mais rápido</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Guia Profissional de Desenvolvimento Web</p>
+        </div>
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

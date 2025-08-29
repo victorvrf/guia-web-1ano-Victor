@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxo – Guia Profissional de Desenvolvimento Web</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Guia Profissional de Desenvolvimento Web</h1>
+            <button class="theme-toggle" aria-label="Alternar tema">🌙</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tecnologias.html">Tecnologias</a></li>
+                    <li><a href="boas-praticas.html">Boas Práticas</a></li>
+                    <li><a href="fluxo.html" aria-current="page">Fluxo de Trabalho</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Fluxograma de um Projeto Web</h2>
+                <p>Metodologia completa do planejamento ao deploy de um projeto web profissional</p>
+            </div>
+        </section>
+
+        <section class="tech-cards">
+            <div class="container">
+                <h2>📋 Fase 1: Planejamento</h2>
+                <div class="cards">
+                    <article class="card">
+                        <h3>1. Análise de Requisitos</h3>
+                        <p>Defina objetivos, público-alvo e funcionalidades principais do projeto.</p>
+                        <pre><code>Perguntas essenciais:
+• Qual o objetivo do site?
+• Quem é o público-alvo?
+• Quais funcionalidades são necessárias?
+• Qual o prazo e orçamento?
+• Haverá integração com sistemas existentes?</code></pre>
+                        <p><strong>Entregável:</strong> Documento de requisitos</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>2. Arquitetura da Informação</h3>
+                        <p>Organize o conteúdo e defina a navegação do site.</p>
+                        <pre><code>Estrutura típica:
+├── Página Inicial
+├── Sobre
+├── Produtos/Serviços
+│   ├── Categoria A
+│   └── Categoria B
+├── Blog
+└── Contato</code></pre>
+                        <p><strong>Ferramenta:</strong> Sitemap, fluxograma de navegação</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>3. Wireframes</h3>
+                        <p>Crie esquemas de baixa fidelidade para definir layout e posicionamento.</p>
+                        <pre><code>Elementos do wireframe:
+┌─────────────────────┐
+│      HEADER         │
+├─────────────────────┤
+│    HERO SECTION     │
+├─────────────────────┤
+│ CONTENT │ SIDEBAR   │
+│         │           │
+├─────────────────────┤
+│      FOOTER         │
+└─────────────────────┘</code></pre>
+                        <p><strong>Ferramenta:</strong> Figma, Balsamiq, papel e caneta</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="tech-cards">
+            <div class="container">
+                <h2>🎨 Fase 2: Design</h2>
+                <div class="cards">
+                    <article class="card">
+                        <h3>4. Design System</h3>
+                        <p>Defina paleta de cores, tipografia e componentes reutilizáveis.</p>
+                        <pre><code>/* Variáveis CSS para Design System */
+:root {
+  /* Cores principais */
+  --primary: #2563EB;
+  --secondary: #64748B;
+  --success: #10B981;
+  --warning: #F59E0B;
+  --error: #EF4444;
+  
+  /* Tipografia */
+  --font-main: 'Inter', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+  
+  /* Espaçamentos */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+}</code></pre>
+                        <p><strong>Benefício:</strong> Consistência visual</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>5. Protótipo Interativo</h3>
+                        <p>Crie um protótipo navegável para validar a experiência do usuário.</p>
+                        <pre><code>Elementos do protótipo:
+• Navegação funcional
+• Animações e transições
+• Estados dos botões (hover, active)
+• Formulários interativos
+• Responsividade</code></pre>
+                        <p><strong>Ferramenta:</strong> Figma, Adobe XD, Sketch</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>6. Validação com Cliente</h3>
+                        <p>Apresente o protótipo e colete feedback antes de começar o desenvolvimento.</p>
+                        <pre><code>Checklist de validação:
+☐ Layout aprovado
+☐ Cores e tipografia aprovadas
+☐ Navegação testada
+☐ Conteúdo revisado
+☐ Funcionalidades validadas
+☐ Responsividade aprovada</code></pre>
+                        <p><strong>Objetivo:</strong> Evitar retrabalho na codificação</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="tech-cards">
+            <div class="container">
+                <h2>⚡ Fase 3: Desenvolvimento</h2>
+                <div class="cards">
+                    <article class="card">
+                        <h3>7. Setup do Ambiente</h3>
+                        <p>Configure o ambiente de desenvolvimento e ferramentas necessárias.</p>
+                        <pre><code>mkdir meu-projeto
+cd meu-projeto
+
+# Inicializar Git
+git init
+git remote add origin [URL_DO_REPO]
+
+# Setup com Vite (exemplo)
+npm create vite@latest . --template vanilla
+npm install
+
+# Estrutura de pastas
+├── src/
+│   ├── css/
+│   ├── js/
+│   └── assets/
+├── public/
+└── dist/</code></pre>
+                        <p><strong>Ferramentas:</strong> VS Code, Git, Node.js</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>8. Desenvolvimento Frontend</h3>
+                        <p>Implemente a interface seguindo o design aprovado.</p>
+                        <pre><code>Ordem de desenvolvimento:
+1. HTML semântico
+   └── Estrutura base, meta tags
+2. CSS responsivo
+   └── Mobile first, componentes
+3. JavaScript
+   └── Interatividade, validações
+4. Otimizações
+   └── Performance, acessibilidade</code></pre>
+                        <p><strong>Metodologia:</strong> Componente por componente</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>9. Testes e Qualidade</h3>
+                        <p>Valide funcionamento, performance e acessibilidade.</p>
+                        <pre><code>Testes essenciais:
+☐ Navegação em diferentes navegadores
+☐ Responsividade (mobile, tablet, desktop)
+☐ Performance (PageSpeed Insights)
+☐ Acessibilidade (WAVE, axe)
+☐ SEO (meta tags, estrutura)
+☐ Formulários e validações
+☐ Links funcionando</code></pre>
+                        <p><strong>Ferramentas:</strong> DevTools, Lighthouse, WAVE</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="tech-cards">
+            <div class="container">
+                <h2>🚀 Fase 4: Deploy e Manutenção</h2>
+                <div class="cards">
+                    <article class="card">
+                        <h3>10. Preparação para Deploy</h3>
+                        <p>Otimize os arquivos para produção.</p>
+                        <pre><code># Build de produção
+npm run build
+
+# Otimizações incluídas:
+• Minificação de CSS/JS
+• Compressão de imagens
+• Tree shaking
+• Bundle splitting
+
+# Estrutura do build
+dist/
+├── index.html
+├── assets/
+│   ├── style.min.css
+│   └── script.min.js
+└── images/</code></pre>
+                        <p><strong>Resultado:</strong> Arquivos otimizados para produção</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>11. Deploy</h3>
+                        <p>Publique o site em um servidor ou plataforma de hospedagem.</p>
+                        <pre><code>Opções de deploy:
+
+• GitHub Pages (gratuito)
+  └── Para sites estáticos
+
+• Netlify/Vercel (gratuito)
+  └── Deploy automático via Git
+
+• Servidor tradicional
+  └── Upload via FTP/SSH
+
+# Deploy automático com GitHub Actions
+name: Deploy
+on: [push]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm ci && npm run build
+      - uses: peaceiris/actions-gh-pages@v3</code></pre>
+                        <p><strong>Recomendação:</strong> Deploy automático</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>12. Monitoramento</h3>
+                        <p>Acompanhe performance, erros e uso do site.</p>
+                        <pre><code>Métricas importantes:
+• Core Web Vitals
+  └── LCP, FID, CLS
+• Analytics
+  └── Páginas mais visitadas, bounce rate
+• Erros JavaScript
+  └── Console, relatórios de erro
+• Uptime
+  └── Disponibilidade do site
+
+Ferramentas:
+• Google Analytics
+• Google Search Console
+• Sentry (monitoramento de erros)</code></pre>
+                        <p><strong>Objetivo:</strong> Melhoria contínua</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="tech-cards">
+            <div class="container">
+                <h2>🔄 Fluxo Visual Completo</h2>
+                <div class="cards">
+                    <article class="card" style="grid-column: 1 / -1;">
+                        <h3>Resumo do Fluxo de Trabalho</h3>
+                        <pre style="text-align: left; font-size: 0.9rem; line-height: 1.6;"><code>┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
+│ 📋 PLANEJAR │───▶│ 🎨 DESIGN   │───▶│ ⚡ DEVELOP  │───▶│ 🚀 DEPLOY   │
+└─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
+       │                   │                   │                   │
+       ▼                   ▼                   ▼                   ▼
+• Requisitos        • Design System   • HTML Semântico   • Build Otimizado
+• Arquitetura       • Protótipo       • CSS Responsivo   • Hospedagem
+• Wireframes        • Validação       • JavaScript       • Monitoramento
+                                     • Testes
+
+                               🔄 CICLO CONTÍNUO 🔄
+                        ┌─────────────────────────────────┐
+                        │   Feedback → Melhorias →       │
+                        │   Atualizações → Otimizações   │
+                        └─────────────────────────────────┘</code></pre>
+                        <p><strong>Duração típica:</strong> 2-8 semanas dependendo da complexidade</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Guia Profissional de Desenvolvimento Web</p>
+        </div>
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
